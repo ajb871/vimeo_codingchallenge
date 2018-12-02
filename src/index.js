@@ -14,54 +14,75 @@ const lorem = `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 	cillum dolore eu fugiat nulla pariatur..`;
 
-
-// React Components //
-
-function Section(title,body,side) {
-	// body...
-}
-
-function App(){
-	return(
-		<div className="all" align="center">
-
-			<div className="group">
-				<div className="item right text">
-					<h1>Monsoon III</h1>
-					<p >{lorem}</p>
-				</div>
-				<div className="item left">
-					<img src={images[2]} alt="Monsoon 3" />
-				</div>
+// Section Components //
+class Section extends React.Component {
+	render () {
+		return (
+		<div>
+			<div className={"item " + this.props.floatText}>
+				<h1>{this.props.title}</h1>
+				<p >{this.props.body}</p>
 			</div>
-			<div className="clear"></div>
-			<div className="gradient">
-					<div className="group">
-						<div className="item left">
-							<h1>Beams</h1>
-							<p >{lorem}</p>
-						</div>
-						<div className="item right">
-							<img src={images[1]} alt="Beams"/>
-						</div>
-					</div>
-					<div className="clear"></div>
-					<div className="group">
-						<div className="item right">
-							<h1>Move 2</h1>
-							<p >{lorem}</p>
-						</div>
-						<div className="item left">
-							<img src={images[0]} alt="Move 2" />
-						</div>
-					</div>
+			<div className={"item " + this.props.floatImage}>
+			<img src={this.props.image} alt={this.props.alt} />
 			</div>
 		</div>
-	);
+		)
+	}
+}
+
+class App extends React.Component{
+
+	render(){
+		return(
+			<div align="center">
+				<div className="group">
+				<Section
+					title= 'Monsoon III' 
+					body= {lorem}
+					image= {images[2]}
+					alt= 'Monsoon 3'
+					floatImage = 'left'
+					floatText = 'right'
+				 />
+				 </div>
+
+				 <div className="gradient">
+					 <div className="group">
+					 <Section 
+					 	title= 'Beams' 
+						body= {lorem}
+						image= {images[1]}
+						alt= 'Beams' 
+						floatImage = 'right'
+						floatText = 'left'
+					 />
+					 </div>
+
+					 <div className="group">
+					  <Section 
+					 	title= 'Move 2' 
+						body= {lorem}
+						image= {images[0]}
+						alt= 'Move 2' 
+						floatImage = 'left'
+						floatText = 'right'
+					 />
+					 </div>
+				 </div>
+
+				 <div className="carousel">
+
+				 
+				 </div>
+
+
+			</div>
+		);
+	}
 }
 
 // Render //
-
 ReactDOM.render(
 	<App />,
 	document.getElementById('root')

@@ -3,45 +3,46 @@ body {
 	font-family: "Segoq UI", sans-serif;
 	font-size: 12pt;
 }
-
 .clear{
 	clear: both;
 }
 
+/* ----- Group Styling ----- */
 .group {
+	overflow: visible;
 	width: 1100px;
 	text-align: left;
 	display: inline-block;
 	padding-bottom: 100px;
+	margin: 0 auto;
 }
+/*Padding between groups*/
 .group:first-child {
-	padding-top: 100px;
+	padding-top: 90px;
+}
+.item img{
+	width: 100%;
 }
 
-.item {
-	margin: 50px;
+/* ----- Text Styling ----- */
+h1, p{
+	margin: 10px 0 10px 0;
+}
+h1 {
+	text-transform: uppercase;
 }
 
+/* ----- Left and Right Elements ----- */
 .left, .right {
-	margin: 0px;
-	width: 45%;
+	width: 49%;
 }
+.left{ float: left; }
 
-.left{
-	float: left;
-}
-
-.right {
-	float: right;
-}
+.right { float: right; }
 
 
-img {
-	vertical-align: middle;
-	height: auto;
-}
-
-@media only screen and (max-width: 1200px) {
+/* ----- Responsive Sizing ----- */
+@media only screen and (max-width: 1150px) {
 	.left, .right, .item {
 		clear: both;
 		margin: 0 auto;
@@ -50,17 +51,17 @@ img {
 	}
 	.item img {
 		margin: 0 auto;
+		padding-top: 35px;
 		display: block;
-		/*width: 100%;*/
+		width: auto;
 	}
 	.group {
-		width: 650px;
+		width: 80%;
 	}
 }
 @media only screen and (max-width: 700px) {
 	.left, .right, .item {
 		clear: both;
-		/*margin: 0 auto;*/
 		max-width: none;
 		width: 100%;
 	}
@@ -73,7 +74,11 @@ img {
 	}
 }
 
+/* ----- Gradient coloring ----- */
 .gradient {
 	color: white;
 	background-color: grey;
 }
+
+
+/* ------ Slideshow ------ */
