@@ -20,12 +20,12 @@ const slides = [
 		desc: lorem
 	},
 	{
-		image: 'https://i.pinimg.com/originals/e3/88/4c/e3884c83d3663fa7ea9ebf8ce6c3295a.jpg',
+		image: 'https://i.pinimg.com/originals/0c/36/28/0c362862a5fbe95411d6dcf4098bbd76.jpg',
 		title: 'Vice Versa',
 		desc: lorem
 	},
 	{
-		image: 'https://berkeleylibrarysc.org/wp-content/uploads/2018/02/Every-Day-Movie-poster.jpg',
+		image: 'https://i.pinimg.com/originals/de/56/4d/de564dbecd9d96a76b5a064ee3b059bf.jpg',
 		title: 'Full Moon',
 		desc: lorem
 	}
