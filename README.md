@@ -7,9 +7,9 @@ This page was created with React.js
 `git clone https://github.com/ajb871/vimeo_codingchallenge.git`
 
 ### Run locally using npm:
-Install all dependencies - 
+Move into directory & install all dependencies: 
 `npm install`
-Run -
+ & run:
 `npm start`
 
 If not redirected, open [http://localhost:3000](http://localhost:3000) 
