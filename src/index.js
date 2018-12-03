@@ -16,22 +16,23 @@ const lorem = `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
 const slides = [
 	{
 		image: 'http://de.web.img3.acsta.net/c_215_290/pictures/17/01/09/14/41/554358.jpg',
-		title: 'Full Moon',
+		title: 'The Fourth Phase',
 		desc: lorem
 	},
 	{
 		image: 'https://i.pinimg.com/originals/e3/88/4c/e3884c83d3663fa7ea9ebf8ce6c3295a.jpg',
-		title: 'Dog',
+		title: 'Vice Versa',
 		desc: lorem
 	},
 	{
 		image: 'https://berkeleylibrarysc.org/wp-content/uploads/2018/02/Every-Day-Movie-poster.jpg',
-		title: 'Grunge',
+		title: 'Full Moon',
 		desc: lorem
 	}
 ];
-// Section Components //
+// Components //
 class Section extends React.Component {
+	// Component for text/image sections
 	render () {
 		return (
 		<div>
@@ -48,6 +49,7 @@ class Section extends React.Component {
 }
 
 class Carousel extends React.Component {
+	// Component for Carousel / slideshow
 	constructor(props){
 		super(props);
 		this.state = {
@@ -56,13 +58,13 @@ class Carousel extends React.Component {
 		};
 	}
 
+	// Slide movement functions
 	prevSlide(e){
 		e.preventDefault();
 
 		let currSlide = this.state.index;
 		let { slides } = this.props;
 		let slidesLength = slides.length - 1;
-		console.log('slide length' + slidesLength)
 
 		if(currSlide === 0){
 			currSlide = slidesLength;
@@ -72,8 +74,6 @@ class Carousel extends React.Component {
 		this.setState({
 			index: currSlide
 		});
-
-		console.log(this.state.index);
 	}
 
 	nextSlide(e){
@@ -82,7 +82,6 @@ class Carousel extends React.Component {
 		let currSlide = this.state.index;
 		let { slides } = this.props;
 		let slidesLength = slides.length - 1;
-		console.log('slide length' + slidesLength)
 
 		if (currSlide < slidesLength){
 			currSlide = currSlide + 1;
@@ -92,8 +91,6 @@ class Carousel extends React.Component {
 		this.setState({
 			index: currSlide
 		});
-
-		console.log(this.state.index);
 	}
 
 	render(){

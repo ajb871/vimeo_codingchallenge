@@ -16,6 +16,7 @@ body {
 	padding-bottom: 100px;
 	margin: 0 auto;
 }
+
 /*Padding between groups*/
 .group:first-child {
 	padding-top: 90px;
@@ -23,7 +24,6 @@ body {
 .item img{
 	width: 100%;
 	transition: 0.2s ease;
-
 }
 
 /* ----- Text Styling ----- */
@@ -53,7 +53,6 @@ body {
 .slides{
 	width: 100%;
 	max-width: 900px;
-	margin: 75px auto 75px auto;
 	display: inline-block;
 }
 
@@ -69,36 +68,37 @@ body {
 	float: right;
 }
 
+/* ----- button styling ----- */
 .slide button {
-	/*button text*/
 	color: white;
 	font-family: "Segoq UI", sans-serif;
 	font-weight: bold;
 	font-size: 12pt;
 
-	/*button styling*/
 	background-color: transparent;
 	border: 2px solid #008CBA;
 	border-radius: 15px;
 	padding: 15px;
-	margin: 20px;
+	margin: 20px 20px 0 0;
 	transition: 0.2s ease;
 }
 #buy{
 	border: none;
 	background-color: #008CBA;
-
 }
+
 .slide button:hover {
 	cursor: pointer;
-	background-color: #1cc6ff;
+	opacity: 0.5;
 }
 
+
+/* ----- slideshow arrows ----- */
 .arrowspan {
 	position: relative;
 	width: 100%;
 	max-width: 1300px;
-	top: -350px;
+	top: -250px;
 }
 
 .arrows{
@@ -108,6 +108,7 @@ body {
 	position: absolute;
 	display: block;
 	opacity: 0.7;
+	transition: 0.3s ease;
 
 	transform: translateY(-50%);
 
@@ -120,8 +121,8 @@ body {
 .next {
 	right: 20px;
 }
-
 a:hover {
+	opacity: 0.4;
 	color: white;
 }
 
@@ -144,18 +145,6 @@ a:hover {
 	.group {
 		width: 80%;
 	}
-	/*place slideshow arrows*/
-	.arrowspan {
-		position: relative;
-		/*width: 1300px;*/
-		/*top: -350px;*/
-	}
-/*	.prev{
-		left: 20px;
-	}
-	.next {
-		right: 20px;
-	}*/
 }
 @media only screen and (max-width: 700px) {
 	/*Sections*/
@@ -193,10 +182,8 @@ a:hover {
 		width: 100%;
 	}
 	.arrowspan {
-		position: relative;
 		width: 100%;
-		max-width: 1300px;
-		top: -550px;
+		top: -500px;
 	}	
 }
 
