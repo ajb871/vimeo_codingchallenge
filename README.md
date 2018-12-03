@@ -1,11 +1,15 @@
 # Vimeo Coding Challenge - Ariana Bennett
-This project was created with React.js
+This page was created with React.js
 
 ## How to Run
 
-In the project directory, you can run:
+###Clone this repository w/:
+`git clone https://github.com/ajb871/vimeo_codingchallenge.git`
 
-### `npm start`
+### Run locally using npm:
+Install all dependencies - 
+`npm install`
+Run -
+`npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If not redirected, open [http://localhost:3000](http://localhost:3000) 
