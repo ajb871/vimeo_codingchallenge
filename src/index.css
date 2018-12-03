@@ -8,7 +8,7 @@ body {
 }
 
 /* ----- Group Styling ----- */
-.group {
+.group, .slides {
 	overflow: visible;
 	width: 1100px;
 	text-align: left;
@@ -22,13 +22,15 @@ body {
 }
 .item img{
 	width: 100%;
+	transition: 0.2s ease;
+
 }
 
 /* ----- Text Styling ----- */
-h1, p{
-	margin: 10px 0 10px 0;
+.item h1, p{
+	margin: 5px 0 5px 0;
 }
-h1 {
+.item h1 {
 	text-transform: uppercase;
 }
 
@@ -41,8 +43,92 @@ h1 {
 .right { float: right; }
 
 
+
+/* ------ Slideshow ------ */
+.carousel {
+	background-image: linear-gradient(to bottom right, black,#4f4f4f);
+	color: white;
+	margin-bottom: 100px;
+}
+.slides{
+	width: 100%;
+	max-width: 900px;
+	margin: 75px auto 75px auto;
+	display: inline-block;
+}
+
+.slide img {
+	height: 100%;
+	width: auto;
+	margin-left: auto;
+	transition: 0.5s ease;
+
+}
+.info {
+	width: 60%;
+	float: right;
+}
+
+.slide button {
+	/*button text*/
+	color: white;
+	font-family: "Segoq UI", sans-serif;
+	font-weight: bold;
+	font-size: 12pt;
+
+	/*button styling*/
+	background-color: transparent;
+	border: 2px solid #008CBA;
+	border-radius: 15px;
+	padding: 15px;
+	margin: 20px;
+	transition: 0.2s ease;
+}
+#buy{
+	border: none;
+	background-color: #008CBA;
+
+}
+.slide button:hover {
+	cursor: pointer;
+	background-color: #1cc6ff;
+}
+
+.arrowspan {
+	position: relative;
+	width: 100%;
+	max-width: 1300px;
+	top: -350px;
+}
+
+.arrows{
+	text-decoration: none;
+	color: #008CBA;
+	cursor: pointer;
+	position: absolute;
+	display: block;
+	opacity: 0.7;
+
+	transform: translateY(-50%);
+
+	font-weight: bold;
+	font-size: 80px;
+}
+.prev{
+	left: 20px;
+}
+.next {
+	right: 20px;
+}
+
+a:hover {
+	color: white;
+}
+
+
 /* ----- Responsive Sizing ----- */
 @media only screen and (max-width: 1150px) {
+	/*Sections*/
 	.left, .right, .item {
 		clear: both;
 		margin: 0 auto;
@@ -58,8 +144,21 @@ h1 {
 	.group {
 		width: 80%;
 	}
+	/*place slideshow arrows*/
+	.arrowspan {
+		position: relative;
+		/*width: 1300px;*/
+		/*top: -350px;*/
+	}
+/*	.prev{
+		left: 20px;
+	}
+	.next {
+		right: 20px;
+	}*/
 }
 @media only screen and (max-width: 700px) {
+	/*Sections*/
 	.left, .right, .item {
 		clear: both;
 		max-width: none;
@@ -69,16 +168,41 @@ h1 {
 		width: 100%;
 		max-width: 505px;
 	}
-	.group {
+	.group{
 		width: 90%;
 	}
+
+	/*Slideshow*/
+	.slide {
+		clear: both;
+		margin: 0 auto;
+		width: 100%;
+	}
+	/*center slideshow images and buttons*/
+	.slide img{
+		margin: 0 auto;
+		display: block;
+		width: auto;
+	}
+	.buttons{
+		margin: 0 auto;
+		display: block;
+		width: auto;
+	}
+	.info {
+		width: 100%;
+	}
+	.arrowspan {
+		position: relative;
+		width: 100%;
+		max-width: 1300px;
+		top: -550px;
+	}	
 }
 
 /* ----- Gradient coloring ----- */
 .gradient {
 	color: white;
-	background-color: grey;
+	background-image: linear-gradient(#4f4f4f,#bcbcbc);
 }
 
-
-/* ------ Slideshow ------ */
